@@ -8,37 +8,32 @@ describe('validator module performs basic validation of', () => {
 
   it('strings', () => {
     let str = 'yes';
-    let num = 1;
-    let arr = ['a'];
-    let obj = {x:'y'};
-    let func = () => {};
-    let bool = false;
     expect(validator.isString(str)).toBeTruthy();
-    expect(validator.isString(num)).toBeFalsy();
-    expect(validator.isString(arr)).toBeFalsy();
-    expect(validator.isString(obj)).toBeFalsy();
-    expect(validator.isString(func)).toBeFalsy();
-    expect(validator.isString(bool)).toBeFalsy();
   });
 
   it('numbers', () => {
-    expect(true).toBeFalsy();
+    let num = 1;
+    expect(validator.isString(num)).toBeFalsy();
   });
 
   it('arrays', () => {
-    expect(true).toBeFalsy();
+    let arr = ['a'];
+    expect(validator.isString(arr)).toBeFalsy();
   });
 
   it('objects', () => {
-    expect(true).toBeFalsy();
+    let obj = {x:'y'};
+    expect(validator.isString(obj)).toBeFalsy();
   });
 
   it('booleans', () => {
-    expect(true).toBeFalsy();
+    let func = () => {};
+    expect(validator.isString(func)).toBeFalsy();
   });
 
   it('functions', () => {
-    expect(true).toBeFalsy();
+    let bool = false;
+    expect(validator.isString(bool)).toBeFalsy();
   });
 
 });
